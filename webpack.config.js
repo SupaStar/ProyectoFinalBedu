@@ -2,15 +2,24 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/assets/js/index.js',
+    entry: {
+        main: './src/assets/js/index.js',
+        buscar: './src/assets/js/buscar.js'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: '[name].bundle.js'
     },
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './src/index.html'
+            template: './src/index.html',
+            chunks: ['main']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'busqueda.html',
+            template: './src/busqueda.html',
+            chunks: ['buscar']
         })
     ],
     module: {
