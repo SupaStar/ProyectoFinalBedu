@@ -8,8 +8,8 @@ import '@fortawesome/fontawesome-free/js/brands'
 
 // import mainImage from '../img/1.png';
 
-import './header';
-import './footer';
+import './header.js';
+import './footer.js';
 
 // document.getElementById('img1').src = mainImage;
 // console.log(mainImage);
