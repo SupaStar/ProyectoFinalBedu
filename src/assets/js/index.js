@@ -1,7 +1,15 @@
 import '../css/index.css';
 import 'bulma/css/bulma.css'
-import mainImage from '../img/1.png';
 
-document.getElementById('img1').src = mainImage;
-console.log(mainImage);
-export {mainImage};
+import '@fortawesome/fontawesome-free/js/fontawesome'
+import '@fortawesome/fontawesome-free/js/solid'
+import '@fortawesome/fontawesome-free/js/regular'
+import '@fortawesome/fontawesome-free/js/brands'
+
+// import mainImage from '../img/1.png';
+
+import './header';
+
+// document.getElementById('img1').src = mainImage;
+// console.log(mainImage);
+// export {mainImage};
