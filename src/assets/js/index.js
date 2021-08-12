@@ -9,6 +9,7 @@ import '@fortawesome/fontawesome-free/js/brands'
 // import mainImage from '../img/1.png';
 
 import './header';
+import './footer';
 
 // document.getElementById('img1').src = mainImage;
 // console.log(mainImage);
