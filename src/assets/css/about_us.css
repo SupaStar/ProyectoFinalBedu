@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=MonteCarlo|Lato');
+
+body{
+	font-family: Lato;
+}
+
+h1{
+	font-family: "MonteCarlo";
+	font-size: 100px;
+}
+
+.ProjectInfo{
+	display: flex;
+}
+
+.container{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+	grid-gap: 0.5em;
+}
+
+.card{
+	height: max-content;
+}
+
+.about{
+/*	background-color: #f7f7f7;*/
+	background-image: url(https://technext.github.io/tropika/images/tasty-image.png);
+  	margin: 50px 50px;
+}
+
+.about__container{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 5% 10%;
+	height: 500px;
+	align-items: center;
+  	justify-content: center;
+  	color: white;
+}
