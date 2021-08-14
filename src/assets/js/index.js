@@ -10,12 +10,6 @@ import mainImage from '../img/1.png';
 
 import logo from '../img/logo.jpg';
 
-import './header.js';
-import './footer.js';
-import './carousel.js';
-
-// document.getElementById('img1').src = mainImage;
-// console.log(mainImage);
 export { mainImage, logo };
 
 
