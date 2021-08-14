@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         main: './src/assets/js/index.js',
-        buscar: './src/assets/js/buscar.js'
+        buscar: './src/assets/js/buscar.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -20,6 +20,10 @@ module.exports = {
             filename: 'busqueda.html',
             template: './src/busqueda.html',
             chunks: ['buscar']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'about_us.html',
+            template: './src/about_us.html'
         })
     ],
     module: {
