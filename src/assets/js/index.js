@@ -1,14 +1,16 @@
 import '../css/index.css';
-import 'bulma/css/bulma.css'
+import '../css/about_us.css';
+import 'bulma/css/bulma.css';
 
-import '@fortawesome/fontawesome-free/js/fontawesome'
-import '@fortawesome/fontawesome-free/js/solid'
-import '@fortawesome/fontawesome-free/js/regular'
-import '@fortawesome/fontawesome-free/js/brands'
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
 
 import mainImage from '../img/1.png';
-
 import logo from '../img/logo.jpg';
+import logo_long from '../img/logo-01.png';
+import bg from '../img/background4-about.jpg';
 
 import './header.js';
 import './footer.js';
@@ -16,6 +18,7 @@ import './carousel.js';
 
 // document.getElementById('img1').src = mainImage;
 // console.log(mainImage);
-export { mainImage, logo };
+export { mainImage, logo, logo_long, bg };
 
+// document.querySelector('.about').style.background =  `url(${bg}) no-repeat fixed 0 0 / cover`;
 

@@ -1,3 +1,5 @@
+import { logo_long } from ".";
+
 class Header extends HTMLElement {
     constructor() {
       super();
@@ -7,8 +9,8 @@ class Header extends HTMLElement {
         this.innerHTML = `
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item" href="https://bulma.io">
-                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+                <a class="navbar-item" href="index.html">
+                    <img class="long-logo" src='${logo_long}' >
                 </a>
             
                 <a role="button" class="navbar-burger " aria-label="menu" aria-expanded="false" data-target="navbar-menu__collapsed" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
@@ -20,7 +22,7 @@ class Header extends HTMLElement {
         
             <div id="navbar-menu__collapsed" class="navbar-menu navbar-start ">
                 <div class="navbar-start">
-                    <a class="navbar-item">
+                    <a class="navbar-item" href='index.html'>
                         Home
                     </a>
 
@@ -33,13 +35,13 @@ class Header extends HTMLElement {
                     </a>
                 </div>
 
-                <a class="navbar-item centered-logo" href="https://bulma.io">
-                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+                <a class="navbar-item centered-logo" href="index.html">
+                    <img class='long-logo' src=${logo_long} >
                 </a>
             
                 <div class="navbar-end">
                     <div class="navbar-item">
-                        <a class="navbar-item">
+                        <a class="navbar-item" href='https://github.com/SupaStar/ProyectoFinalBedu' target='_blank'>
                             <span class="icon">
                                 <i class="fab fa-github"></i>
                             </span>
