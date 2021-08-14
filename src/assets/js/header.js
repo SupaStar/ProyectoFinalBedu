@@ -23,9 +23,9 @@ class Header extends HTMLElement {
                     <a class="navbar-item">
                         Home
                     </a>
-            
-                    <a class="navbar-item">
-                        About us
+
+                    <a class="navbar-item" href="./about_us.html">
+                    About us
                     </a>
 
                     <a class="navbar-item">
