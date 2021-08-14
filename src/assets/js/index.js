@@ -6,11 +6,14 @@ import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/brands'
 
-// import mainImage from '../img/1.png';
+import mainImage from '../img/1.png';
+
+import logo from '../img/logo.jpg';
 
 import './header.js';
 import './footer.js';
+import './carousel.js';
 
 // document.getElementById('img1').src = mainImage;
 // console.log(mainImage);
-// export {mainImage};
+export { mainImage, logo };

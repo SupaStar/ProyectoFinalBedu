@@ -1,3 +1,29 @@
 .navbar-item {
     text-align: center;
 }
+
+.mobile-footer {
+    display: none;
+}
+
+.desktop-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* background-color: white !important; */
+}
+
+.footer-logo {
+    width: 300px;
+}
+
+.desktop-footer p {
+    width: 30%;
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-footer {
+        display: block;
+    }
+}
