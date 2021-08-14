@@ -10,7 +10,54 @@
     
 </head>
 <body>
-  <header-component></header-component>
+  <!-- <header-component></header-component> -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      </a>
+  
+      <a role="button" class="navbar-burger " aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu navbar-start ">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
+  
+        <a class="navbar-item">
+          About us
+        </a>
+
+        <a class="navbar-item">
+          Recipe list
+        </a>
+      </div>
+
+      <a class="navbar-item centered-logo" href="https://bulma.io">
+        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      </a>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+            <a class="navbar-item">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Repository</span>
+            </a>
+        </div>
+      </div>
+    </div>
+  
+  
+  </nav>
     
   <section class="section is-medium">
     <h1 class="title">We have solutions for your midnight cravings.</h1>

@@ -2,9 +2,13 @@
     text-align: center;
 }
 
-.mobile-footer {
-    display: none;
+.mobile-footer, .navbar-brand {
+    display: none !important;
 }
+
+/* .centered-logo {
+    display: flex !important;
+} */
 
 .desktop-footer {
     display: flex;
@@ -23,11 +27,12 @@
 }
 
 @media screen and (max-width: 768px) {
-    .desktop-footer {
-        display: none;
+    .desktop-footer, .centered-logo {
+        display: none !important;
     }
     
-    .mobile-footer {
-        display: block;
+    .mobile-footer, .navbar-brand {
+        display: flex !important;
     }
+
 }
