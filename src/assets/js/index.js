@@ -17,3 +17,5 @@ import './carousel.js';
 // document.getElementById('img1').src = mainImage;
 // console.log(mainImage);
 export { mainImage, logo };
+
+
