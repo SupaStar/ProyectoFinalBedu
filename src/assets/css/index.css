@@ -26,6 +26,7 @@
     width: 30%;
 }
 
+/* Mobile styles */
 @media screen and (max-width: 768px) {
     .desktop-footer, .centered-logo {
         display: none !important;
@@ -33,6 +34,13 @@
     
     .mobile-footer, .navbar-brand {
         display: flex !important;
+    }
+
+    .cta-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
 }
