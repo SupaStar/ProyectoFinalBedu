@@ -20,6 +20,11 @@ module.exports = {
             filename: 'busqueda.html',
             template: './src/busqueda.html',
             chunks: ['buscar']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'results.html',
+            template: './src/results.html',
+            chunks: ['resultados']
         })
     ],
     module: {
