@@ -27,7 +27,7 @@ npm i
 3. Iniciar el servidor de Webpack con
 
 ```sh
-npm start:
+npm start
 ```
 
 ## Proyecto
