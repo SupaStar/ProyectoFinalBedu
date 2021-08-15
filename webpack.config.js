@@ -5,6 +5,7 @@ module.exports = {
     entry: {
         main: './src/assets/js/index.js',
         buscar: './src/assets/js/buscar.js',
+        mealId: './src/assets/js/mealId.js',
         footer: './src/assets/js/footer.js',
         header: './src/assets/js/header.js',
         carousel: './src/assets/js/carousel.js',
@@ -26,6 +27,7 @@ module.exports = {
             chunks: ['buscar']
         }),
         new HtmlWebpackPlugin({
+
             filename: 'about_us.html',
             template: './src/about_us.html',
             chunks: ['about_us', 'footer', 'header']
@@ -33,7 +35,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'recipe.html',
             template: './src/recipe.html',
-            chunks: ['footer', 'header']
+            chunks: ['footer', 'header','mealId']
         })
     ],
     module: {
