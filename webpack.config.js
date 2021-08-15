@@ -29,6 +29,11 @@ module.exports = {
             filename: 'about_us.html',
             template: './src/about_us.html',
             chunks: ['about_us', 'footer', 'header']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'recipe.html',
+            template: './src/recipe.html',
+            chunks: ['footer', 'header']
         })
     ],
     module: {

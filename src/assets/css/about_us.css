@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=MonteCarlo|Lato');
 
-html, body, header, .about {
+.about {
   width: 100%;
   height: 100%;
   font-family: Lato;
@@ -43,7 +43,7 @@ html, body, header, .about {
     z-index: -1;
   }
 
-h1{
+.about-title, .credits-title{
 	font-family: "MonteCarlo";
 	font-size: 100px;
 }
