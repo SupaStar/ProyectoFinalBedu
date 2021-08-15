@@ -1,5 +1,5 @@
 const urlParam = window.location.search.substring(1);
-
+import './carousel';
 if (urlParam === "") {
     fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
         .then(response => response.json())
