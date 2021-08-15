@@ -5,6 +5,10 @@ module.exports = {
     entry: {
         main: './src/assets/js/index.js',
         buscar: './src/assets/js/buscar.js',
+        footer: './src/assets/js/footer.js',
+        header: './src/assets/js/header.js',
+        carousel: './src/assets/js/carousel.js',
+        about_us: './src/assets/js/about_us.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -14,7 +18,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/index.html',
-            chunks: ['main']
+            chunks: ['main', 'footer', 'header', 'carousel']
         }),
         new HtmlWebpackPlugin({
             filename: 'busqueda.html',
@@ -23,16 +27,31 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: 'about_us.html',
-            template: './src/about_us.html'
+            template: './src/about_us.html',
+            chunks: ['about_us', 'footer', 'header']
         })
     ],
     module: {
         rules: [
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
-                loader: 'file-loader'
+                loader: 'file-loader',
+                options: {
+                    name: 'img/[name].[ext]',
+                },
             },
-            {test: /\.css$/, use: ['style-loader', 'css-loader']},
+            {
+                test: /\.css$/,
+                use: [
+                    {loader: 'style-loader'},
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            url: false,
+                        },
+                    }
+                ],
+            },
             {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
