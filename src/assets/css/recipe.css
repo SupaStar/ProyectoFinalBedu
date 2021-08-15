@@ -1,0 +1,118 @@
+.recipe-header, .recipe-details, .recipe-alternatives {
+    display: flex;
+}
+
+.recipe-header {
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-top: 5%;
+}
+
+.recipe-details {
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.recipe-details__ingredients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.recipe-details__ingredients--list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recipe-details__ingredients--list li {
+    padding-left: 1.3rem;
+}
+
+.recipe-details__ingredients--list li:before {
+    content: '\2611';
+    display: inline-block;
+    font-family: FontAwesome;
+    margin-left: -1.3rem;
+    width: 1.3rem;
+}
+
+.recipe-details__ingredients, .recipe-details__instructions, .recipe-alternatives, .recipe-alternatives__random, .recipe-alternatives__carousel {
+    flex: 1;
+}
+
+.recipe-alternatives__carousel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.recipe-alternatives__random {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    /* flex:1; */
+}
+
+.recipe-alternatives__carousel, .carousel {
+    flex-direction: column;
+}
+
+.recipe-alternatives__random h4 {
+    width: 100%;
+}
+
+.carousel {
+    width: 100% !important;
+    /* margin: 5%; */
+}
+
+.divider {
+    display: block;
+    border-top: 1px solid lightgray;
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .recipe-header, .recipe-details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .recipe-details {
+        margin: 0 10%;
+        text-align: justify; 
+    }
+
+    .recipe-details__ingredients--list {
+        font-size: 1.5rem;
+
+    }
+
+    .recipe-details__ingredients--list li:before {
+        content: '\2611';
+        display: inline-block;
+        font-family: FontAwesome;
+        margin-left: -1.75rem;
+        width: 1.75rem;
+    }
+
+    .recipe-details__instructions p {
+        line-height: 1.5;
+    }
+
+    .recipe-alternatives {
+        flex-direction: column-reverse;
+    }
+
+    .divider {
+        display: none;
+    }
+}

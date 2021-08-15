@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste U</title>
+</head>
+<body>
+
+    <header-component></header-component>
+
+    <div class="section recipe-header">
+        <div style="text-align:center">
+            <h1 class="title is-3 recipe-header__title" id="recipeName">Recipe name</h1>
+            <h3 class='subtitle mb-5' id="recipeArea">What's that smell?</h3>
+            <h3 class='subtitle mb-5' id="recipeTags">What's that smell?</h3>
+        </div>
+        <img class="recipe-header__img" alt="recipeImg" src="https://bulma.io/images/placeholders/256x256.png" id="recipeImg"/>
+    </div>
+
+    <div class="recipe-details">
+        <div class="section recipe-details__ingredients"> 
+            <h2 class="subtitle is-3 is-spaced">Ingredients</h2>
+            <ul class="content recipe-details__ingredients--list" id="ingredients">
+            </ul>
+        </div>
+        <div class="section recipe-details__instructions">
+            <h2 class='subtitle is-3 is-spaced has-text-centered'>Instructions</h2>
+            <p id="instructions">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem</p>
+        </div>
+    </div>
+
+    <div class="divider"> </div>
+
+    <div class="recipe-alternatives">
+        <div class=" content m-6 has-text-centered recipe-alternatives__random">
+            <h4 class='subtitle is-4 '>Don't like what you see?</h4>
+            <p class=>No worries! We can always get a new random recipe, just for you.</p>
+            <button class='button is-primary is-light is-outlined'>Try something new!</button>
+        </div>
+
+        <div class="section is-small has-text-centered recipe-alternatives__carousel ">
+            <div class='carousel'>
+                <h3 class='title is-3 '>More&nbsp;like&nbsp;this!<h3>
+                <a class="prevSlide" >&#10094;</a>
+                <a class="nextSlide" >&#10095;</a>
+            </div>
+        </div>
+    </div>
+
+
+    <footer-component></footer-component>
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=MonteCarlo|Lato');
+
+.about {
+  width: 100%;
+  height: 100%;
+  font-family: Lato;
+}
+
+.about,
+.about__overlay:before {
+  background: url(../img/background4-about.jpg) no-repeat fixed 0 0 / cover;
+}
+
+
+.about {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.about__overlay {
+  max-height: auto;
+  margin: 0 auto;
+  max-width: 768px;
+  overflow: hidden;
+  padding: 50px;
+  position: relative;
+  color: black;
+  font-family: 'Lato';
+  position: relative;
+  text-align: center;
+  z-index: 0;
+}
+
+.about__overlay:before {
+    content: '';
+    filter: blur(20px);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+.about-title, .credits-title{
+	font-family: "MonteCarlo";
+	font-size: 100px;
+}
+
+.ProjectInfo{
+	display: flex;
+}
+
+.container{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+	grid-gap: 0.5em;
+}
+
+.card{
+	height: max-content;
+}
