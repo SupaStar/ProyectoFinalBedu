@@ -15,5 +15,7 @@ import bg from '../img/background4-about.jpg';
 
 export { mainImage, logo, logo_long };
 
+import './carousel.js';
+
 // document.querySelector('.about').style.background =  `url(${bg}) no-repeat fixed 0 0 / cover`;
 
