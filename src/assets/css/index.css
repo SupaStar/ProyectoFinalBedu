@@ -116,7 +116,7 @@
     }
 
     .footer-links li a{
-        font-size: 24px;
+        font-size: medium;
     }
     
     .footer-links li {
@@ -126,7 +126,7 @@
     .footer-links li:not(:first-child):before {
         content:' | ';
         white-space: pre;
-        font-size: 24px;
+        /* font-size: 24px; */
     }
     
     .mobile-footer, .navbar-brand {
