@@ -27,7 +27,6 @@ module.exports = {
             chunks: ['buscar']
         }),
         new HtmlWebpackPlugin({
-
             filename: 'about_us.html',
             template: './src/about_us.html',
             chunks: ['about_us', 'footer', 'header']
@@ -36,7 +35,12 @@ module.exports = {
             filename: 'recipe.html',
             template: './src/recipe.html',
             chunks: ['footer', 'header','mealId']
-        })
+        }),
+        new HtmlWebpackPlugin({
+          filename: 'results.html',
+          template: './src/results.html',
+          chunks: ['resultados', 'header', 'footer']
+        }),
     ],
     module: {
         rules: [
