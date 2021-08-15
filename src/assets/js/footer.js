@@ -7,21 +7,36 @@ class Footer extends HTMLElement {
 
     connectedCallback() {
       this.innerHTML = `
-        <footer class="footer desktop-footer">
+        <!-- <footer class="footer desktop-footer">
           <img src=${logo} class='footer-logo'/>
 
-          <p>Lorem ipsum[1] dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. </p>
-
+          
+          <ul class='footer-links'>
+            <li><a href='index.html'>Home</a></li>
+            <li><a href='about_us.html'>About us</a></li>
+            <li><a>Recipe list</a></li>
+            <li><a href='https://github.com/SupaStar/ProyectoFinalBedu' target='_blank'>GitHub repo</a></li>
+          </ul>
         </footer>
 
         <footer class="footer mobile-footer">
-          <blockquote class='container is-fluid content '>
-          <p>
-              Lorem ipsum[1] dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. 
-          <br /> <br/>
-          <cite style="float:right"> - Lorem ipsum dolor</cite>
+          <p class='subtitle'>
+            We strive to always bring you the yummiest recipes!
           </p>
-          </blockquote>
+        </footer> -->
+
+        <footer class='footer'>
+          <div>
+            <img src=${logo} class='footer-logo'/>
+
+            <ul class='footer-links'>
+              <li><a href='index.html'>Home</a></li>
+              <li><a href='about_us.html'>About us</a></li>
+              <li><a>Recipe list</a></li>
+              <li><a href='https://github.com/SupaStar/ProyectoFinalBedu' target='_blank'>GitHub repo</a></li>
+            </ul>
+          </div>
+          <p class='is-small has-text-centered mt-6'>Taste U© 2021 by Equipo 19</p>
         </footer>
         `
     }

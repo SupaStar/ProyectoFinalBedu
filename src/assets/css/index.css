@@ -11,7 +11,8 @@
 } */
 
 .carousel {
-    max-width: 50%;
+    min-width: 50%;
+    max-width: 75%;
     position: relative;
     margin: 0 auto;
 
@@ -57,7 +58,7 @@
     margin-top: -22px;
     color: black;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 10vw;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -76,7 +77,7 @@
     /* background-color: rgba(0,0,0,0.8); */
   }
 
-.desktop-footer {
+.footer div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,14 +89,44 @@
     width: 300px;
 }
 
-.desktop-footer p {
-    width: 30%;
+.footer-links li a{
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.footer-links li {
+    text-align: right;
 }
 
 /* Mobile styles */
 @media screen and (max-width: 768px) {
-    .desktop-footer, .centered-logo {
+    .footer img, .centered-logo {
         display: none !important;
+    }
+
+    .footer div {
+        display: block;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-links li a{
+        font-size: 24px;
+    }
+    
+    .footer-links li {
+        text-align: center;
+    }
+
+    .footer-links li:not(:first-child):before {
+        content:' | ';
+        white-space: pre;
+        font-size: 24px;
     }
     
     .mobile-footer, .navbar-brand {

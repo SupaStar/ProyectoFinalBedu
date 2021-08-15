@@ -1,6 +1,7 @@
 import '../css/index.css';
 import '../css/about_us.css';
 import '../css/recipe.css';
+import '../css/results.css'
 import 'bulma/css/bulma.css';
 
 import '@fortawesome/fontawesome-free/js/fontawesome';
@@ -18,6 +19,4 @@ export { mainImage, logo, logo_long };
 import './header.js';
 import './footer.js';
 import './carousel.js';
-
-// document.querySelector('.about').style.background =  `url(${bg}) no-repeat fixed 0 0 / cover`;
-
+import './results.js';
