@@ -19,18 +19,18 @@
 						class="input is-medium"
 						type="text"
 						name=""
-						id="search-meal"
+						id="input-meal"
 						placeholder="Search recipe"
 					/>
 				</div>
 				<div class="column is-mobile is-4-tablet is-12">
-					<button class="button is-large is-dark">Go for it</button>
+					<button class="button is-large is-dark" id="search-meal">Go for it</button>
 				</div>
 			</div>
 		</main>
 		<section class="section is-small mx-4">
 			<h1 class="title is-size-1">Meals</h1>
-			<article class="columns is-multiline">
+			<article class="columns is-multiline" id="container-cards">
 				<div
 					class="
 						column
@@ -159,5 +159,6 @@
 		</section>
 
 		<footer-component></footer-component>
+        <script src="./assets/js/results.js"></script>
 	</body>
 </html>
