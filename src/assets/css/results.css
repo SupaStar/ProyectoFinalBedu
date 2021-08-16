@@ -6,3 +6,14 @@
 .card__image-zoom:hover {
 	transform: scale(1.1);
 }
+
+/* Class addon modified to centered */
+.field.has-addons {
+    justify-content: center;
+}
+
+@media screen and (max-width:  1024px) {
+    .addon__text-hidden {
+        display: none;
+    }
+}

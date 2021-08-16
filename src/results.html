@@ -12,19 +12,92 @@
 
 	<body>
 		<header-component></header-component>
-		<main class="mx-6  mt-4">
+		<main class="mx-6 mt-4">
 			<div class="columns is-multiline has-text-centered">
-				<div class="column control is-mobile is-4-tablet is-12">
-					<input
-						class="input is-medium"
-						type="text"
-						name=""
-						id="input-meal"
-						placeholder="Search recipe"
-					/>
+				<div class="column is-half">
+					<div class="column control is-mobile is-4-tablet is-12">
+						<input
+							class="input is-medium"
+							type="text"
+							name=""
+							id="input-meal"
+							placeholder="Search recipe"
+						/>
+					</div>
+					<div class="column is-mobile is-4-tablet is-12">
+						<button
+							class="
+								button
+								is-size-5-tablet is-size-3-desktop is-dark
+							"
+							id="search-meal"
+						>
+							Go for it
+						</button>
+					</div>
 				</div>
-				<div class="column is-mobile is-4-tablet is-12">
-					<button class="button is-size-5-tablet is-size-3-desktop is-dark" id="search-meal">Go for it</button>
+				<div class="column is-half">
+					<div class="column">
+						<h2 class="subtitle is-size-6-mobile is-size-4">
+							Search for:
+						</h2>
+					</div>
+					<div class="column field has-addons" id="matching">
+						<p class="control">
+							<button class="button is-focused">
+								<span class="icon is-small">
+									<i class="fas fa-align-left">M</i>
+								</span>
+								<span class="addon__text-hidden">Meal</span>
+							</button>
+						</p>
+						<p class="control">
+							<button class="button">
+								<span class="icon is-small">
+									<i class="fas fa-align-center">I</i>
+								</span>
+								<span class="addon__text-hidden"
+									>Ingredient</span
+								>
+							</button>
+						</p>
+						<p class="control">
+							<button class="button">
+								<span class="icon is-small">
+									<i class="fas fa-align-right">C</i>
+								</span>
+								<span class="addon__text-hidden">Category</span>
+							</button>
+						</p>
+						<p class="control">
+							<button class="button">
+								<span class="icon is-small">
+									<i class="fas fa-align-center">A</i>
+								</span>
+								<span class="addon__text-hidden">Area</span>
+							</button>
+						</p>
+					</div>
+					<div class="column">
+                        <p class="subtitle is-size-6-mobile is-size-4">Recipes to see:</p>
+						<div class="field has-addons">
+							<p class="control">
+								<button class="button is-focused">
+									<span>8</span>
+								</button>
+							</p>
+							<p class="control">
+								<button class="button">
+									<span>16</span>
+								</button>
+							</p>
+							<p class="control">
+								<button class="button">
+									<span>32</span>
+								</button>
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</main>
@@ -45,8 +118,7 @@
 								class="
 									card-header-title
 									title
-									is-size-5-mobile
-                                    is-size-3
+									is-size-5-mobile is-size-3
 									has-text-weight-medium
 								"
 							>
@@ -67,6 +139,6 @@
 		</section>
 
 		<footer-component></footer-component>
-        <script src="./assets/js/results.js"></script>
+		<script src="./assets/js/results.js"></script>
 	</body>
 </html>
