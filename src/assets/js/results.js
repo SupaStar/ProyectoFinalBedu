@@ -1,7 +1,7 @@
 /* <div class="column is-mobile is-half-tablet is-3-desktop m-auto card__image-zoom">
 	<a class="card">
 		<div class="card-header">
-			<p class="card-header-title title is-4 has-text-weight-medium">Image name</p>
+			<p class="card-header-title title is-size-5-mobile is-size-3 has-text-weight-medium">Image name</p>
 		</div>
 		<div class="card-image">
 			<span class="image">
@@ -40,7 +40,7 @@ const createCard = (recipeName, imageSrc, placeHolder) => {
     // Card Header
 	const pHeader = createNodeClassChild(
 		"p",
-		["card-header-title", "title", "is-4", "has-text-weight-medium"],
+		["card-header-title", "title", "is-size-5-mobile", "is-size-3", "has-text-weight-medium"],
 		null
 	);
 	pHeader.textContent = recipeName;
@@ -64,3 +64,6 @@ const createCard = (recipeName, imageSrc, placeHolder) => {
 
 searchButton.addEventListener('click', () => createCard('Panquecos','https://bulma.io/images/placeholders/1280x960.png','hola'));
 
+createCard('Test 1','https://bulma.io/images/placeholders/1280x960.png','hola');
+createCard('Test 2','https://bulma.io/images/placeholders/1280x960.png','hola');
+createCard('Test 3','https://bulma.io/images/placeholders/1280x960.png','hola');
