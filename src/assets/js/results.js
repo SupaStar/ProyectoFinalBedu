@@ -10,7 +10,7 @@
 		</div>
 	</a>
 </div> */
-
+import '../css/results.css';
 // Create cards
 const searchInput = document.querySelector("#input-meal");
 const searchButton = document.querySelector("#search-meal");
@@ -70,66 +70,68 @@ const containerCards = document.body.querySelector("#container-cards");
 }; */
 
 const auxEndpoint = (searchFor, request) => {
-	switch (searchFor) {
-		case "meal":
-			if (request.length === 1) return `https://www.themealdb.com/api/json/v1/1/search.php?f=${request}`;
-			return `https://www.themealdb.com/api/json/v1/1/search.php?s=${request}`;
-		case "ingredient":
-			return `www.themealdb.com/api/json/v1/1/filter.php?i=${request}`;
-		case "category":
-			return `www.themealdb.com/api/json/v1/1/filter.php?c=${request}`;
-		case "area":
-			return `www.themealdb.com/api/json/v1/1/filter.php?a=${request}`;
-	}
+    switch (searchFor) {
+        case "meal":
+            if (request.length === 1) return `https://www.themealdb.com/api/json/v1/1/search.php?f=${request}`;
+            return `https://www.themealdb.com/api/json/v1/1/search.php?s=${request}`;
+        case "ingredient":
+            return `https://www.themealdb.com/api/json/v1/1/filter.php?i=${request}`;
+        case "category":
+            return `https://www.themealdb.com/api/json/v1/1/filter.php?c=${request}`;
+        case "area":
+            return `https://www.themealdb.com/api/json/v1/1/filter.php?a=${request}`;
+    }
 };
 
 const containerMatch = document.querySelectorAll(".field.has-addons");
 searchMatch(containerMatch[0])
 let searchType = '';
+
 // Addons
 function searchMatch(addons) {
-	const optionButtons = addons.querySelectorAll("button");
-	optionButtons.forEach(myButton => {
-		myButton.addEventListener("click", () => {
-			optionButtons.forEach(btn => btn.classList.remove("is-focused"));
-			myButton.classList.add("is-focused");
-			searchType = myButton.dataset.target; // Opción de búsqueda o total de elementos de búsqueda
-		});
-	});
+    const optionButtons = addons.querySelectorAll("button");
+    optionButtons.forEach(myButton => {
+        myButton.addEventListener("click", () => {
+            optionButtons.forEach(btn => btn.classList.remove("is-focused"));
+            myButton.classList.add("is-focused");
+            searchType = myButton.dataset.target; // Opción de búsqueda o total de elementos de búsqueda
+        });
+    });
 }
+
 function buscarMeal(event) {
-	event.preventDefault();
-	let search = searchInput.value.trim(); //El trim quita los espacios en blanco
-	if (search) {
-		//Si se escribió algo entra a este if
-		console.log(auxEndpoint(searchType, search));
-		fetch('https://www.themealdb.com/api/json/v1/1/list.php?c=list')
-			.then(response => response.json())
-			.then(data => {
+    event.preventDefault();
+    let search = searchInput.value.trim(); //El trim quita los espacios en blanco
+    if (search) {
+        //Si se escribió algo entra a este if
+        console.log(auxEndpoint(searchType, search));
+        fetch('https://www.themealdb.com/api/json/v1/1/list.php?c=list')
+            .then(response => response.json())
+            .then(data => {
                 console.log(data)
-				/* containerCards.innerHTML = data.meals
-					.map( 
-					// `<div class="column is-mobile is-half-tablet is-3-desktop m-auto card__image-zoom">
-                    //     <a class="card">
-                    //         <div class="card-header">
-                    //             <p class="card-header-title title is-size-5-mobile is-size-3 has-text-weight-medium">${meal.strMeal}</p>
-                    //         </div>
-                    //         <div class="card-image">
-                    //             <span class="image">
-                    //                 <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
-                    //             </span>
-                    //         </div>
-                    //     </a>
-                    // </div>`
-					)
-					.join(""); //Junta todos los elementos */
-			});
-		searchInput.value = "";
-	}
+                containerCards.innerHTML = data.meals
+                    .map(
+                        `<div class="column is-mobile is-half-tablet is-3-desktop m-auto card__image-zoom">
+                        <a class="card">
+                            <div class="card-header">
+                                <p class="card-header-title title is-size-5-mobile is-size-3 has-text-weight-medium">${meal.strMeal}</p>
+                            </div>
+                            <div class="card-image">
+                                <span class="image">
+                                    <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
+                                </span>
+                            </div>
+                        </a>
+                    </div>`
+                    )
+                    .join(""); //Junta todos los elementos
+            });
+        searchInput.value = "";
+    }
 };
 searchButton.addEventListener("click", buscarMeal);
 searchInput.addEventListener("keydown", function (e) {
-	if (e.key === "Enter") buscarMeal(e);
+    if (e.key === "Enter") buscarMeal(e);
 });
 
 // dropdowns
@@ -163,9 +165,10 @@ areaDropButton.addEventListener("click", () => {
         })
     })
 })
+
 // 
-buttonGetCategory.addEventListener("click", function() { 
-    categoryVal = categoryDropButton.childNodes[1].textContent 
+buttonGetCategory.addEventListener("click", function () {
+    categoryVal = categoryDropButton.childNodes[1].textContent
 });
 
 // Función general para los dropDown, no funciona correcto
@@ -181,4 +184,89 @@ function selectDropdown(dropDown, buttonClicked) {
             dropDown.classList.remove("is-active")
         })
     })
+}
+
+let categorias = document.querySelector('#dropdown-menu3 .dropdown-content').children;
+let areas = document.querySelector('#dropdown-menu4 .dropdown-content').children;
+Array.from(categorias).forEach(categoria => {
+    categoria.addEventListener('click', function () {
+        busquedaCategorias(categoria);
+    });
+})
+Array.from(areas).forEach(area => {
+    area.addEventListener('click', function () {
+        busquedaAreas(area);
+    });
+})
+const busquedaCategorias = (categoria) => {
+    containerCards.innerHTML = "";
+    fetch(auxEndpoint('category', categoria.textContent))
+        .then(response => response.json())
+        .then(response => {
+            response.meals.forEach(meal => {
+                let $card = document.createElement('div');
+                $card.className = 'column is-mobile is-half-tablet is-3-desktop m-auto card__image-zoom';
+                $card.innerHTML = `
+                        <a class="card">
+            <div class="card-header">
+                <p class="card-header-title title is-size-5-mobile is-size-3 has-text-weight-medium">${meal.strMeal}</p>
+            </div>
+            <div class="card-image">
+                                <span class="image">
+                                    <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
+                                </span>
+            </div>
+        </a>
+                `;
+                containerCards.appendChild($card);
+            })
+        })
+}
+const busquedaAreas = (area) => {
+    containerCards.innerHTML = "";
+    fetch(auxEndpoint('area', area.textContent))
+        .then(response => response.json())
+        .then(response => {
+            response.meals.forEach(meal => {
+                let $card = document.createElement('div');
+                $card.className = 'column is-mobile is-half-tablet is-3-desktop m-auto card__image-zoom';
+                $card.innerHTML = `
+                        <a class="card">
+            <div class="card-header">
+                <p class="card-header-title title is-size-5-mobile is-size-3 has-text-weight-medium">${meal.strMeal}</p>
+            </div>
+            <div class="card-image">
+                                <span class="image">
+                                    <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
+                                </span>
+            </div>
+        </a>
+                `;
+                containerCards.appendChild($card);
+            })
+        })
+}
+const urlParam = window.location.search.substring(1);
+if (urlParam !== "") {
+    const platillo = urlParam.split('=')[1];
+    fetch(auxEndpoint('meal', platillo)).then(response => response.json())
+        .then(response => {
+            response.meals.forEach(meal => {
+                let $card = document.createElement('div');
+                $card.className = 'column is-mobile is-half-tablet is-3-desktop m-auto card__image-zoom';
+                $card.innerHTML = `
+                        <a class="card">
+            <div class="card-header">
+                <p class="card-header-title title is-size-5-mobile is-size-3 has-text-weight-medium">${meal.strMeal}</p>
+            </div>
+            <div class="card-image">
+                                <span class="image">
+                                    <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
+                                </span>
+            </div>
+        </a>
+                `;
+                containerCards.appendChild($card);
+            })
+        })
 }
