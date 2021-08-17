@@ -16,7 +16,7 @@ import bg from '../img/background4-about.jpg';
 
 export { mainImage, logo, logo_long };
 
-import './header.js';
-import './footer.js';
-import './carousel.js';
-import './results.js';
+// import './header.js';
+// import './footer.js';
+// import './carousel.js';
+// import './results.js';
