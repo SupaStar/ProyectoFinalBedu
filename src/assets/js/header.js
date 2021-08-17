@@ -30,7 +30,7 @@ class Header extends HTMLElement {
                     About us
                     </a>
 
-                    <a class="navbar-item" href='results.html'>
+                    <a class="navbar-item" href="./results.html">
                         Recipe list
                     </a>
                 </div>
