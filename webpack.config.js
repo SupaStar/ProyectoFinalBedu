@@ -11,6 +11,7 @@ module.exports = {
         carousel: './src/assets/js/carousel.js',
         about_us: './src/assets/js/about_us.js',
         resultados: './src/assets/js/results.js',
+        buttonSearch: './src/assets/js/buttonSearch.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -20,7 +21,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/index.html',
-            chunks: ['main', 'footer', 'header', 'carousel']
+            chunks: ['main', 'footer', 'header', 'carousel','buttonSearch']
         }),
         new HtmlWebpackPlugin({
             filename: 'busqueda.html',
@@ -38,9 +39,9 @@ module.exports = {
             chunks: ['footer', 'header','mealId']
         }),
         new HtmlWebpackPlugin({
-          filename: 'results.html',
-          template: './src/results.html',
-          chunks: ['resultados', 'header', 'footer']
+            filename: 'results.html',
+            template: './src/results.html',
+            chunks: ['resultados', 'header', 'footer']
         }),
     ],
     module: {
