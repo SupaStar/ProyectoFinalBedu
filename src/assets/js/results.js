@@ -17,74 +17,14 @@ const searchButton = document.querySelector("#search-meal");
 
 const containerCards = document.body.querySelector("#container-cards");
 
-/* const createCard = (recipeName, imageSrc, placeHolder) => {
-	// Create a node with several classes and children
-	const createNodeClassChild = (tagNode, classArr, childrenArr) => {
-		const element = document.createElement(tagNode);
-
-		for (const classValue of classArr) {
-			element.classList.add(classValue);
-		}
-		if (childrenArr !== null) {
-			for (const child of childrenArr) {
-				element.appendChild(child);
-			}
-		}
-		return element;
-	};
-	// Image Content
-	const image = new Image();
-	image.src = imageSrc;
-	image.alt = placeHolder;
-	const spanImage = createNodeClassChild("span", ["image"], [image]);
-	const cardImage = createNodeClassChild("div", ["card-image"], [spanImage]);
-	// Card Header
-	const pHeader = createNodeClassChild(
-		"p",
-		[
-			"card-header-title",
-			"title",
-			"is-size-5-mobile",
-			"is-size-3",
-			"has-text-weight-medium",
-		],
-		null
-	);
-	pHeader.textContent = recipeName;
-	const cardHeader = createNodeClassChild("div", ["card-header"], [pHeader]);
-	// Wrap anchor in final div and append to container
-	const aCard = createNodeClassChild("a", ["card"], [cardHeader, cardImage]);
-	const mealCard = createNodeClassChild(
-		"div",
-		[
-			"column",
-			"is-mobile",
-			"is-half-tablet",
-			"is-3-desktop",
-			"m-auto",
-			"card__image-zoom",
-		],
-		[aCard]
-	);
-	containerCards.appendChild(mealCard); // Ad Card in container
-}; */
-
-const auxEndpoint = (searchFor, request) => {
-	switch (searchFor) {
-		case "meal":
-			if (request.length === 1) return `https://www.themealdb.com/api/json/v1/1/search.php?f=${request}`;
-			return `https://www.themealdb.com/api/json/v1/1/search.php?s=${request}`;
-		case "ingredient":
-			return `www.themealdb.com/api/json/v1/1/filter.php?i=${request}`;
-		case "category":
-			return `www.themealdb.com/api/json/v1/1/filter.php?c=${request}`;
-		case "area":
-			return `www.themealdb.com/api/json/v1/1/filter.php?a=${request}`;
-	}
+const auxEndpoint = (request) => {
+    // Function to set different endpoint for search
+    let endPoint = 'https://www.themealdb.com/api/json/v1/1/search.php?';
+    request.length === 1 ? endPoint+='f='+request : endPoint+='s='+request
+	return endPoint;
 };
 
 const containerMatch = document.querySelectorAll(".field.has-addons");
-searchMatch(containerMatch[0])
 let searchType = '';
 // Addons
 function searchMatch(addons) {
@@ -101,29 +41,28 @@ function buscarMeal(event) {
 	event.preventDefault();
 	let search = searchInput.value.trim(); //El trim quita los espacios en blanco
 	if (search) {
-		//Si se escribió algo entra a este if
-		console.log(auxEndpoint(searchType, search));
-		fetch('https://www.themealdb.com/api/json/v1/1/list.php?c=list')
-			.then(response => response.json())
-			.then(data => {
-                console.log(data)
-				/* containerCards.innerHTML = data.meals
-					.map( 
-					// `<div class="column is-mobile is-half-tablet is-3-desktop m-auto card__image-zoom">
-                    //     <a class="card">
-                    //         <div class="card-header">
-                    //             <p class="card-header-title title is-size-5-mobile is-size-3 has-text-weight-medium">${meal.strMeal}</p>
-                    //         </div>
-                    //         <div class="card-image">
-                    //             <span class="image">
-                    //                 <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
-                    //             </span>
-                    //         </div>
-                    //     </a>
-                    // </div>`
+		//Si se escribió algo entra a este if y ejecuta fetch y llenado de cards
+		fetch(auxEndpoint(search))
+        .then(response => response.json())
+        .then(data => {
+            if(data.meals){
+				containerCards.innerHTML = data.meals
+					.map(meal =>`<div class="column is-mobile is-half-tablet is-3-desktop m-auto card__image-zoom">
+                        <a class="card">
+                            <div class="card-header">
+                                <p class="card-header-title title is-size-5-mobile is-size-3 has-text-weight-medium">${meal.strMeal}</p>
+                            </div>
+                            <div class="card-image">
+                                <span class="image">
+                                    <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
+                                </span>
+                            </div>
+                        </a>
+                    </div>`
 					)
-					.join(""); //Junta todos los elementos */
-			});
+					.join(""); // Junta todos los elementos
+			} else showModal(); // Si no se tienen datos muestra modal
+        });
 		searchInput.value = "";
 	}
 };
@@ -168,17 +107,12 @@ buttonGetCategory.addEventListener("click", function() {
     categoryVal = categoryDropButton.childNodes[1].textContent 
 });
 
-// Función general para los dropDown, no funciona correcto
 
-// categoryDropButton.addEventListener("click", selectDropdown(categoryDropdown, categoryDropButton));
-// areaDropButton.addEventListener("click", selectDropdown(areaDropdown, areaDropButton));
-function selectDropdown(dropDown, buttonClicked) {
-    dropDown.classList.toggle("is-active");
-    const optionsDropdown = dropDown.querySelectorAll(".dropdown-item");
-    optionsDropdown.forEach(item => {
-        item.addEventListener("click", () => {
-            buttonClicked.childNodes[1].textContent = item.textContent
-            dropDown.classList.remove("is-active")
-        })
-    })
+// modal
+function showModal(){
+    const modalContainer = document.querySelector(".modal");
+    modalContainer.classList.add('is-active')
+    setTimeout(() => {
+        modalContainer.classList.remove('is-active')
+    }, 2000);
 }
