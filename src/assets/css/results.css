@@ -6,3 +6,26 @@
 .card__image-zoom:hover {
 	transform: scale(1.1);
 }
+
+/* Class addon modified to centered */
+.field.has-addons {
+    justify-content: center;
+}
+
+/* Class center dropdown and button */
+.dropdowns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dropdowns__button {
+    left: -10px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+@media screen and (max-width:  1024px) {
+    .addon__text-hidden {
+        display: none;
+    }
+}
