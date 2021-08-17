@@ -267,5 +267,8 @@ if (urlParam !== "") {
                 `;
 				containerCards.appendChild($card);
 			})
-		})
+		}).catch(error=>{
+		let notificacion = document.querySelector('.notification');
+		notificacion.classList.remove('is-hidden');
+	})
 }
