@@ -29,8 +29,16 @@
     border-top-left-radius: 0;
 }
 
-@media screen and (max-width:  1024px) {
+.search-btn {
+    margin-top: 0;
+}
+
+@media screen and (max-width:  768px) {
     .addon__text-hidden {
         display: none;
+    }
+
+    .search-btn {
+        margin-top: 30px;
     }
 }
