@@ -110,7 +110,7 @@ function buscarMeal(event) {
 					.map(
 						meal =>
 							`<div class="column is-mobile is-half-tablet is-3-desktop m-auto card__image-zoom">
-                        <a class="card" href = "recipe.html?id=${meal.idMeal}" >
+                        <a class="card" href="recipe.html?id=${meal.idMeal}" >
                             <div class="card-header">
                                 <p class="card-header-title title is-size-5-mobile is-size-3 has-text-weight-medium">${meal.strMeal}</p>
                             </div>
@@ -206,7 +206,7 @@ const busquedaCategorias = (categoria) => {
 				let $card = document.createElement('div');
 				$card.className = 'column is-mobile is-half-tablet is-3-desktop m-auto card__image-zoom';
 				$card.innerHTML = `
-                        <a class="card">
+                        <a class="card" href="recipe.html?id=${meal.idMeal}">
             <div class="card-header">
                 <p class="card-header-title title is-size-5-mobile is-size-3 has-text-weight-medium">${meal.strMeal}</p>
             </div>
@@ -230,7 +230,7 @@ const busquedaAreas = (area) => {
 				let $card = document.createElement('div');
 				$card.className = 'column is-mobile is-half-tablet is-3-desktop m-auto card__image-zoom';
 				$card.innerHTML = `
-                        <a class="card">
+                        <a class="card" href="recipe.html?id=${meal.idMeal}">
             <div class="card-header">
                 <p class="card-header-title title is-size-5-mobile is-size-3 has-text-weight-medium">${meal.strMeal}</p>
             </div>
