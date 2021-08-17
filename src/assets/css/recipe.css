@@ -9,6 +9,11 @@
     margin-top: 5%;
 }
 
+.recipe-header__img {
+    min-width: 40% !important;
+    max-width: 40%;
+}
+
 .recipe-details {
     justify-content: space-evenly;
     align-items: center;
@@ -84,6 +89,11 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+
+    .recipe-header__img {
+        min-width: 100% !important;
+        max-width: 100%;
     }
 
     .recipe-details {
