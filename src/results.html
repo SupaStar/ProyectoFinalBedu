@@ -12,82 +12,17 @@
 
 	<body>
 		<header-component></header-component>
-		<main class="mx-6 mt-4">
+		<main class="container has-primarymgh-medium mx-6">
 			<div class="columns is-multiline has-text-centered">
-				<div class="column is-12-tablet is-half-desktop">
-					<div class="column control is-mobile is-4-tablet is-12">
-						<input
-							class="input is-medium"
-							type="text"
-							name=""
-							id="input-meal"
-							placeholder="Search recipe"
-						/>
-					</div>
-					<div class="column is-mobile is-4-tablet is-12">
-						<button
-							class="
-								button
-								is-size-5-tablet is-size-3-desktop is-dark
-							"
-							id="search-meal"
-						>
-							Go for it
-						</button>
-					</div>
+				<div class="column control is-mobile is-4-tablet is-12">
+					<input
+						class="input is-medium"
+						type="text"
+						name=""
+						id="input-meal"
+						placeholder="Search recipe"
+					/>
 				</div>
-				<div class="column">
-					<div class="column">
-						<h2 class="subtitle is-size-6-mobile is-size-4">
-							Search for:
-						</h2>
-					</div>
-					<div class="columns">
-						<div class="column is-half dropdowns">
-							<div class="dropdown" id="drop-category">
-								<div class="dropdown-trigger">
-									<button
-										class="button"
-										aria-haspopup="true"
-										aria-controls="dropdown-menu3"
-										id="drop-category__button"
-									>
-										<span>Category</span>
-										<span class="icon is-small">
-											<i
-												class="fas fa-angle-down"
-												aria-hidden="true"
-												>V</i
-											>
-										</span>
-									</button>
-								</div>
-								<div
-									class="dropdown-menu"
-									id="dropdown-menu3"
-									role="menu"
-								>
-									<div class="dropdown-content">
-										<a href="#" class="dropdown-item">Beef</a>
-										<a href="#" class="dropdown-item">Breakfast</a>
-										<a href="#" class="dropdown-item">Chicken</a>
-										<a href="#" class="dropdown-item">Dessert</a>
-										<a href="#" class="dropdown-item">Goat</a>
-										<a href="#" class="dropdown-item">Lamb</a>
-										<a href="#" class="dropdown-item">Miscellaneous</a>
-										<a href="#" class="dropdown-item">Pasta</a>
-										<a href="#" class="dropdown-item">Pork</a>
-										<a href="#" class="dropdown-item">Seafood</a>
-										<a href="#" class="dropdown-item">Side</a>
-										<a href="#" class="dropdown-item">Starter</a>
-										<a href="#" class="dropdown-item">Vegan</a>
-										<a href="#" class="dropdown-item">Vegetarian</a>
-									</div>
-								</div>
-							</div>
-							<button
-								class="button is-dark dropdowns__button"
-								id="search-for-category"
 				<div class="column is-mobile is-4-tablet is-12">
 					<button class="button is-large is-dark" id="search-meal">Go for it</button>
 				</div>
@@ -114,128 +49,20 @@
 									has-text-weight-medium
 								"
 							>
-								<span class="icon is-small">
-									<i class="fas fa-bold">C</i>
-								</span>
-							</button>
-						</div>
-						<div class="column is-half dropdowns">
-							<div class="dropdown" id="drop-area">
-								<div class="dropdown-trigger">
-									<button
-										class="button"
-										aria-haspopup="true"
-										aria-controls="dropdown-menu4"
-										id="drop-area__button"
-									>
-										<span>Area</span>
-										<span class="icon is-small">
-											<i
-												class="fas fa-angle-down"
-												aria-hidden="true"
-												>V</i
-											>
-										</span>
-									</button>
-								</div>
-								<div
-									class="dropdown-menu"
-									id="dropdown-menu4"
-									role="menu"
-								>
-									<div class="dropdown-content">
-										<a href="#" class="dropdown-item">American</a>
-										<a href="#" class="dropdown-item">British</a>
-										<a href="#" class="dropdown-item">Chinese</a>
-										<a href="#" class="dropdown-item">French</a>
-										<a href="#" class="dropdown-item">Italian</a>
-										<a href="#" class="dropdown-item">Japanese</a>
-										<a href="#" class="dropdown-item">Mexican</a>
-										<a href="#" class="dropdown-item">Russian</a>
-										<a href="#" class="dropdown-item">Turkish</a>
-										<a href="#" class="dropdown-item">Unknown</a>
-									</div>
-								</div>
-							</div>
-							<button
-								class="button is-dark dropdowns__button"
-								id="search-for-area"
-							>
-								<span class="icon is-small">
-									<i class="fas fa-bold">C</i>
-								</span>
-							</button>
-						</div>
-					</div>
-					<!-- <div class="column field has-addons" id="matching">
-						<p class="control">
-							<button class="button is-focused" data-target="meal">
-								<span class="icon is-small">
-									<i class="fas fa-align-left">M</i>
-								</span>
-								<span class="addon__text-hidden">Meal</span>
-							</button>
-						</p>
-						<p class="control">
-							<button class="button" data-target="ingredient">
-								<span class="icon is-small">
-									<i class="fas fa-align-center">I</i>
-								</span>
-								<span class="addon__text-hidden"
-									>Ingredient</span
-								>
-							</button>
-						</p>
-						<p class="control">
-							<button class="button" data-target="category">
-								<span class="icon is-small">
-									<i class="fas fa-align-right">C</i>
-								</span>
-								<span class="addon__text-hidden">Category</span>
-							</button>
-						</p>
-						<p class="control">
-							<button class="button" data-target="area">
-								<span class="icon is-small">
-									<i class="fas fa-align-center">A</i>
-								</span>
-								<span class="addon__text-hidden">Area</span>
-							</button>
-						</p>
-					</div> -->
-					<div class="column">
-						<p class="subtitle is-size-6-mobile is-size-4">
-							Recipes to see:
-						</p>
-						<div class="field has-addons">
-							<p class="control">
-								<button
-									class="button is-focused"
-									data-target="8"
-								>
-									<span>8</span>
-								</button>
-							</p>
-							<p class="control">
-								<button class="button" data-target="16">
-									<span>16</span>
-								</button>
-							</p>
-							<p class="control">
-								<button class="button" data-target="32">
-									<span>32</span>
-								</button>
+								Image name
 							</p>
 						</div>
-					</div>
+						<div class="card-image">
+							<span class="image">
+								<img
+									src="https://bulma.io/images/placeholders/1280x960.png"
+									alt="Placeholder image"
+								/>
+							</span>
+						</div>
+					</a>
 				</div>
-			</div>
-		</main>
-		<section class="section is-small mx-4">
-			<h1 class="title is-size-3-mobile is-size-1">Meals</h1>
-			<article class="columns is-multiline" id="container-cards">
-				<!-- Erase to final -->
-				<!-- <div
+				<div
 					class="
 						column
 						is-mobile is-half-tablet is-3-desktop
@@ -249,7 +76,7 @@
 								class="
 									card-header-title
 									title
-									is-size-5-mobile is-size-3
+									is-4
 									has-text-weight-medium
 								"
 							>
@@ -265,11 +92,73 @@
 							</span>
 						</div>
 					</a>
-				</div> -->
+				</div>
+				<div
+					class="
+						column
+						is-mobile is-half-tablet is-3-desktop
+						m-auto
+						card__image-zoom
+					"
+				>
+					<a class="card">
+						<div class="card-header">
+							<p
+								class="
+									card-header-title
+									title
+									is-4
+									has-text-weight-medium
+								"
+							>
+								Image name
+							</p>
+						</div>
+						<div class="card-image">
+							<span class="image">
+								<img
+									src="https://bulma.io/images/placeholders/1280x960.png"
+									alt="Placeholder image"
+								/>
+							</span>
+						</div>
+					</a>
+				</div>
+				<div
+					class="
+						column
+						is-mobile is-half-tablet is-3-desktop
+						m-auto
+						card__image-zoom
+					"
+				>
+					<a class="card">
+						<div class="card-header">
+							<p
+								class="
+									card-header-title
+									title
+									is-4
+									has-text-weight-medium
+								"
+							>
+								Image Name
+							</p>
+						</div>
+						<div class="card-image">
+							<span class="image">
+								<img
+									src="https://bulma.io/images/placeholders/1280x960.png"
+									alt="Placeholder image"
+								/>
+							</span>
+						</div>
+					</a>
+				</div>
 			</article>
 		</section>
 
 		<footer-component></footer-component>
-		<script src="./assets/js/results.js"></script>
+        <script src="./assets/js/results.js"></script>
 	</body>
 </html>
