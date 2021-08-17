@@ -32,7 +32,7 @@ class Footer extends HTMLElement {
             <ul class='footer-links'>
               <li><a href='index.html'>Home</a></li>
               <li><a href='about_us.html'>About us</a></li>
-              <li><a>Recipe list</a></li>
+              <li><a href='results.html'>Recipe list</a></li>
               <li><a href='https://github.com/SupaStar/ProyectoFinalBedu' target='_blank'>GitHub repo</a></li>
             </ul>
           </div>
