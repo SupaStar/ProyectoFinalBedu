@@ -10,12 +10,15 @@
 		</div>
 	</a>
 </div> */
+
 import '../css/results.css';
-// Create cards
+
+// Elements
 const searchInput = document.querySelector("#input-meal");
 const searchButton = document.querySelector("#search-meal");
 
 const containerCards = document.body.querySelector("#container-cards");
+
 
 /* const createCard = (recipeName, imageSrc, placeHolder) => {
 	// Create a node with several classes and children
@@ -99,20 +102,19 @@ function searchMatch(addons) {
     });
 }
 
-function buscarMeal(event) {
-    event.preventDefault();
-    let search = searchInput.value.trim(); //El trim quita los espacios en blanco
-    if (search) {
-        //Si se escribió algo entra a este if
-        console.log(auxEndpoint(searchType, search));
-        fetch('https://www.themealdb.com/api/json/v1/1/list.php?c=list')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
-                containerCards.innerHTML = data.meals
-                    .map(
-                        `<div class="column is-mobile is-half-tablet is-3-desktop m-auto card__image-zoom">
-                        <a class="card">
+const buscarMeal = event => {
+	event.preventDefault();
+	let search = searchInput.value.trim(); //El trim quita los espacios en blanco
+	if (search) {
+		//Si se escribió algo entra a este if
+		fetch(auxEndpoint('meal',search))
+			.then(response => response.json())
+			.then(data => {
+				containerCards.innerHTML = data.meals
+					.map(
+						meal =>
+							`<div class="column is-mobile is-half-tablet is-3-desktop m-auto card__image-zoom">
+                        <a class="card" href = "recipe.html?id=${meal.idMeal}" >
                             <div class="card-header">
                                 <p class="card-header-title title is-size-5-mobile is-size-3 has-text-weight-medium">${meal.strMeal}</p>
                             </div>
