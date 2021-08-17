@@ -254,7 +254,7 @@ if (urlParam !== "") {
 				let $card = document.createElement('div');
 				$card.className = 'column is-mobile is-half-tablet is-3-desktop m-auto card__image-zoom';
 				$card.innerHTML = `
-                        <a class="card">
+                        <a class="card" href="recipe.html?id=${meal.idMeal}">
             <div class="card-header">
                 <p class="card-header-title title is-size-5-mobile is-size-3 has-text-weight-medium">${meal.strMeal}</p>
             </div>
