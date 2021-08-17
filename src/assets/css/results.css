@@ -1,4 +1,4 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+/* @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"; */
 
 .card__image-zoom {
 	transition: transform 0.2s;
@@ -18,8 +18,13 @@
     justify-content: center;
     align-items: center;
 }
+
+.dropdown-trigger button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
 .dropdowns__button {
-    left: -10px;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
 }

@@ -10,22 +10,22 @@
 <body>
 <header-component></header-component>
 <main class="mx-6 mt-4">
-	<div class="columns is-multiline has-text-centered">
+	<div class="columns is-multiline has-text-centered is-vcentered">
 		<div class="column is-12-tablet is-half-desktop">
-			<div class="column control is-mobile is-4-tablet is-12">
+			<div class="column control is-12 is-flex-desktop">
 				<input
-						class="input is-medium"
+						class="input is-9 is-medium"
 						type="text"
 						name=""
 						id="input-meal"
 						placeholder="Search recipe"
 				/>
-			</div>
-			<div class="column is-mobile is-4-tablet is-12">
+			<!-- </div> -->
+			<!-- <div class="column is-mobile is-4-tablet is-12"> -->
 				<button
 						class="
 								button
-								is-size-5-tablet is-size-3-desktop is-dark
+								is-3 is-dark is-medium is-hidden-mobile 
 							"
 						id="search-meal"
 				>
@@ -40,7 +40,7 @@
 				</h2>
 			</div>
 			<div class="columns">
-				<div class="column is-half dropdowns">
+				<div class="column is-half  dropdowns">
 					<div class="dropdown" id="drop-category">
 						<div class="dropdown-trigger">
 							<button
