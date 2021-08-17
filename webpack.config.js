@@ -40,7 +40,7 @@ module.exports = {
         new HtmlWebpackPlugin({
           filename: 'results.html',
           template: './src/results.html',
-          chunks: ['resultadoss', 'header', 'footer']
+          chunks: ['resultados', 'header', 'footer']
         }),
     ],
     module: {
