@@ -10,6 +10,7 @@ module.exports = {
         header: './src/assets/js/header.js',
         carousel: './src/assets/js/carousel.js',
         about_us: './src/assets/js/about_us.js',
+        resultados: './src/assets/js/results.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -39,7 +40,7 @@ module.exports = {
         new HtmlWebpackPlugin({
           filename: 'results.html',
           template: './src/results.html',
-          chunks: ['resultados', 'header', 'footer']
+          chunks: ['resultadoss', 'header', 'footer']
         }),
     ],
     module: {
