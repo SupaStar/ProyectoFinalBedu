@@ -1,40 +1,39 @@
-const urlParam = window.location.search.substring(1);
+const urlParam = window.location.search.substring(1); //Se obtienen los parametros en la url
 import './carousel';
-if (urlParam === "") {
+
+if (urlParam === "") {//Si no se reciben parametros, se mostrara una receta random
     fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
         .then(response => response.json())
-        .then(meal => mostrarReceta(meal))
+        .then(meal => mostrarReceta(meal))//Llama a la funcion mostrar receta mediante el endpoint random
         .catch(exception => mostrarError(exception));
 } else {
-    const id = urlParam.split('=')[1];
+    const id = urlParam.split('=')[1];//Se obtiene el valor del id mandado por url
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
         .then(response => response.json())
-        .then(meal => mostrarReceta(meal))
+        .then(meal => mostrarReceta(meal))//Llama a la funcion mostrar receta mediante el endpoint con id
         .catch(exception => mostrarError(exception));
 }
 
 const mostrarReceta = (meal) => {
     let comida = meal.meals[0];
-    document.getElementById('recipeName').innerText = comida.strMeal;
-    document.getElementById('recipeArea').innerText = comida.strArea;
-    document.getElementById('recipeTags').innerText = comida.strTags;
-    document.getElementById('recipeImg').src = comida.strMealThumb;
-    document.getElementById('instructions').innerText = comida.strInstructions;
-    var images = [];
-    for (let i = 1; i <= 20; i++) {
-        let key = "strIngredient" + i;
-        let keyMeasure = "strMeasure" + i;
-        let $divIngredientes = document.getElementById('ingredients');
-        if (comida[key] !== "") {
-            let $ingrediente = document.createElement('li');
-            $ingrediente.innerHTML = `${comida[key]} <b>${comida[keyMeasure]}</b>`;
-            $divIngredientes.appendChild($ingrediente);
-            images.push(comida[key]);
+    document.getElementById('recipeName').innerText = comida.strMeal;//Se agregan los datos mediante una busqueda del div por Id
+    document.getElementById('recipeArea').innerText = comida.strArea;//Se agregan los datos mediante una busqueda del div por Id
+    document.getElementById('recipeTags').innerText = comida.strTags;//Se agregan los datos mediante una busqueda del div por Id
+    document.getElementById('recipeImg').src = comida.strMealThumb;//Se agregan los datos mediante una busqueda del div por Id
+    document.getElementById('instructions').innerText = comida.strInstructions;//Se agregan los datos mediante una busqueda del div por Id
+    for (let i = 1; i <= 20; i++) {//for para recorrer el numero maximo de ingredientes que se reciben
+        let key = "strIngredient" + i;//Se concatena la key con el indice para ingredientes
+        let keyMeasure = "strMeasure" + i;//Se concatena la key con el indice para cantidades
+        let $divIngredientes = document.getElementById('ingredients');//Se obtiene el div donde se pondran los ingredientes
+        if (comida[key] !== "") {//Si el contenido es vacio, significa que no hay mas ingredientes
+            let $ingrediente = document.createElement('li');//Se crea el elemento de la lista de ingredientes
+            $ingrediente.innerHTML = `${comida[key]} <b>${comida[keyMeasure]}</b>`;//Se agrega el ingrediente y su cantidad
+            $divIngredientes.appendChild($ingrediente);//Se inserta el elemento en la lista
         }
     }
 }
 const mostrarError = (error) => {
-    let notificacion = document.querySelector('.notification');
-    notificacion.textContent = error;
-    notificacion.classList.remove('is-hidden');
+    let notificacion = document.querySelector('.notification');//Se obtiene el div con la clase de notificacion
+    notificacion.textContent = error;//Se le ingresa el texto de error cachado
+    notificacion.classList.remove('is-hidden');//Se elimina la clase hidden para que se muestre
 }
