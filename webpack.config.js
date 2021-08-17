@@ -39,9 +39,9 @@ module.exports = {
             chunks: ['footer', 'header','mealId']
         }),
         new HtmlWebpackPlugin({
-          filename: 'results.html',
-          template: './src/results.html',
-          chunks: ['resultados', 'header', 'footer']
+            filename: 'results.html',
+            template: './src/results.html',
+            chunks: ['resultados', 'header', 'footer']
         }),
     ],
     module: {
