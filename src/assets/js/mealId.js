@@ -1,3 +1,5 @@
+import {renderCarousel} from "./carousel";
+
 const urlParam = window.location.search.substring(1); //Se obtienen los parametros en la url
 import './carousel';
 
@@ -31,6 +33,18 @@ const mostrarReceta = (meal) => {
             $divIngredientes.appendChild($ingrediente);//Se inserta el elemento en la lista
         }
     }
+    recetasCarrusel(comida.strArea);
+}
+const recetasCarrusel = (area)=> {
+    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`).then(response=>response.json())
+        .then(recetas=>{
+            let parecidas=recetas.meals.sort(() => 0.5 - Math.random()).slice(0,5);
+            let prueba=[];
+            parecidas.forEach(receta=>{
+                prueba.push(receta.strMealThumb);
+            })
+            renderCarousel(prueba);
+        }).catch(exception => mostrarError(exception));
 }
 const mostrarError = (error) => {
     let notificacion = document.querySelector('.notification');//Se obtiene el div con la clase de notificacion
