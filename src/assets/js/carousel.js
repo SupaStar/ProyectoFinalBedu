@@ -26,11 +26,12 @@ const renderCarousel = images => {
 
 
 // Next/previous controls
-function goToSlide(n) {
+const goToSlide = (n) => {
     showSlides(slideIndex += n);
 }
 
-function showSlides(n) {
+// Render carousel
+const showSlides = (n) => {
     var slides = document.querySelectorAll(".slide");
 
     if (n > slides.length) {
@@ -48,4 +49,27 @@ function showSlides(n) {
 var slideIndex = 0;
 renderCarousel(images);
 showSlides(slideIndex);
+// console.log(window.location)
+
+// const getRandomRecipes = async n => {
+//     let results = [];
+//     for (let i = 0; i < n; i++) {
+//         // const recipe = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
+//         // result.push(results);
+//         fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+//         .then(response => response.json())
+//         .then(response => results.push(response));
+//     }
+//     console.log(results);
+//     return results;
+// }
+
+// getRandomRecipes();
+
+// const file = window.location.pathname;
+// if (file === '/index.html' || file === '/'){ // Render home carousel
+
+// } else if(file === '/recipe.html'){ // Render recipe carousel
+
+// }
 

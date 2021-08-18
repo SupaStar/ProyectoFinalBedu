@@ -13,7 +13,7 @@ class Header extends HTMLElement {
                     <img class="long-logo" src='${logo_long}' >
                 </a>
             
-                <a role="button" class="navbar-burger " aria-label="menu" aria-expanded="false" data-target="navbar-menu__collapsed" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu__collapsed" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -22,15 +22,15 @@ class Header extends HTMLElement {
         
             <div id="navbar-menu__collapsed" class="navbar-menu navbar-start ">
                 <div class="navbar-start">
-                    <a class="navbar-item" href='index.html'>
+                    <a class="navbar-item has-text-dark" href='index.html'>
                         Home
                     </a>
 
-                    <a class="navbar-item" href="./about_us.html">
+                    <a class="navbar-item has-text-dark" href="./about_us.html">
                     About us
                     </a>
 
-                    <a class="navbar-item" href="./results.html">
+                    <a class="navbar-item has-text-dark" href="./results.html">
                         Recipe list
                     </a>
                 </div>
@@ -41,7 +41,7 @@ class Header extends HTMLElement {
             
                 <div class="navbar-end">
                     <div class="navbar-item">
-                        <a class="navbar-item" href='https://github.com/SupaStar/ProyectoFinalBedu' target='_blank'>
+                        <a class="navbar-item has-text-dark" href='https://github.com/SupaStar/ProyectoFinalBedu' target='_blank'>
                             <span class="icon">
                                 <i class="fab fa-github"></i>
                             </span>
