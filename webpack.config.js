@@ -38,7 +38,7 @@ module.exports = {
             template: './src/results.html',
             chunks: ['resultados', 'header', 'footer']
         }),
-        new FaviconsWebpackPlugin('./src/assets/img/favicon.webp')
+        new FaviconsWebpackPlugin('./src/assets/img/favicon.png')
     ],
     module: {
         rules: [
