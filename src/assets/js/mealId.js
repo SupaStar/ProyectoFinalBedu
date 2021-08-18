@@ -33,12 +33,12 @@ const mostrarReceta = (meal) => {
             $divIngredientes.appendChild($ingrediente);//Se inserta el elemento en la lista
         }
     }
-    recetasCarrusel(comida.strArea);
+    recetasCarrusel(comida.strArea);//Se llama a la funcion con el area
 }
-const recetasCarrusel = (area)=> {
+const recetasCarrusel = (area)=> {//Funcion para llenar el carrusel con recetas del misma area
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`).then(response=>response.json())
         .then(recetas=>{
-            let parecidas=recetas.meals.sort(() => 0.5 - Math.random()).slice(0,5);
+            let parecidas=recetas.meals.sort(() => 0.5 - Math.random()).slice(0,5);//Se ordenan aleatoriamente y se obtienen 5 recetas
             renderCarousel(parecidas);
             goToSlide(1);
         }).catch(exception => mostrarError(exception));
