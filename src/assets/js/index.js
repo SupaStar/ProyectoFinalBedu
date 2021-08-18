@@ -1,6 +1,6 @@
 import '../css/index.css';
 // import '../css/about_us.css';
-import '../css/recipe.css';
+// import '../css/recipe.css';
 import '../css/results.css'
 import 'bulma/css/bulma.css';
 

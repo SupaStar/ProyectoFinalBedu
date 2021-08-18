@@ -1,4 +1,5 @@
 import {goToSlide, renderCarousel} from "./carousel";
+import '../css/recipe.css';
 
 const urlParam = window.location.search.substring(1); //Se obtienen los parametros en la url
 import './carousel';

@@ -76,6 +76,23 @@
     /* margin: 5%; */
 }
 
+.carousel-foreground {
+    background: none !important;
+}
+
+.carousel-foreground h3 {
+    text-shadow: none !important;
+}
+
+.prevSlide, .nextSlide {
+    color: black !important;
+    text-shadow: 3px 1px rgba(0, 0, 0, 0.35) !important;
+    top: 30% !important;
+}
+
+.prevSlide {left: -40% !important;}
+.nextSlide {right: -40% !important;}
+
 .divider {
     display: block;
     border-top: 1px solid lightgray;
@@ -124,5 +141,9 @@
 
     .divider {
         display: none;
+    }
+
+    .prevSlide, .nextSlide {
+        top: 22.5% !important;
     }
 }
