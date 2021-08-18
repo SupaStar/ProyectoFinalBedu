@@ -19,10 +19,10 @@ if (urlParam === "") {//Si no se reciben parametros, se mostrara una receta rand
 const mostrarReceta = (meal) => {
     let comida = meal.meals[0];
     document.getElementById('recipeName').innerText = comida.strMeal;//Se agregan los datos mediante una busqueda del div por Id
-    document.getElementById('recipeArea').innerText = comida.strArea;//Se agregan los datos mediante una busqueda del div por Id
-    document.getElementById('recipeTags').innerText = comida.strTags;//Se agregan los datos mediante una busqueda del div por Id
-    document.getElementById('recipeImg').src = comida.strMealThumb;//Se agregan los datos mediante una busqueda del div por Id
-    document.getElementById('instructions').innerText = comida.strInstructions;//Se agregan los datos mediante una busqueda del div por Id
+    document.getElementById('recipeArea').innerText = comida.strArea;
+    document.getElementById('recipeTags').innerText = comida.strTags;
+    document.getElementById('recipeImg').src = comida.strMealThumb;
+    document.getElementById('instructions').innerText = comida.strInstructions;
     for (let i = 1; i <= 20; i++) {//for para recorrer el numero maximo de ingredientes que se reciben
         let key = "strIngredient" + i;//Se concatena la key con el indice para ingredientes
         let keyMeasure = "strMeasure" + i;//Se concatena la key con el indice para cantidades
