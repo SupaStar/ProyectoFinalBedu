@@ -1,6 +1,3 @@
-// import {logo, mainImage} from ".";
-
-// const images = [mainImage, logo, mainImage, mainImage, mainImage, mainImage];
 
 const renderCarousel = objects => {
 
