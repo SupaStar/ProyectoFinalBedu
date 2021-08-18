@@ -38,7 +38,7 @@ module.exports = {
             template: './src/results.html',
             chunks: ['resultados', 'header', 'footer']
         }),
-        new FaviconsWebpackPlugin('./src/assets/img/tasteU_logo-03-01.png')
+        new FaviconsWebpackPlugin('./src/assets/img/favicon.webp')
     ],
     module: {
         rules: [
