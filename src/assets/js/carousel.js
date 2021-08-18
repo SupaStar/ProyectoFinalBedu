@@ -63,9 +63,9 @@ if (file === '/' || file === '/index.html') {
     let promises = [];
     for (let i = 0; i <= 5; i++) { // Retrieving 5 random meals
         promises.push(fetch('https://www.themealdb.com/api/json/v1/1/random.php')
-        .then(data => data.json().then(data => {
-            recipes.push(data.meals[0]);
-        })).catch(error => console.error(error)));
+            .then(data => data.json().then(data => {
+                recipes.push(data.meals[0]);
+            })).catch(error => console.error(error)));
     }
 
     Promise.all(promises).then(data => { // And appending them to the carousel when we have all
@@ -74,4 +74,4 @@ if (file === '/' || file === '/index.html') {
     })
 }
 
-export { renderCarousel };
+export {renderCarousel, goToSlide};
