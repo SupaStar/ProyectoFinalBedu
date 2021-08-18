@@ -5,9 +5,9 @@ buttonSearch.addEventListener('click', (e) => {
     redireccionar();
 })
 inputSearch.addEventListener('keydown', (event) => {
-    event.preventDefault();
     var keycode = event.key;
     if (keycode === 'Enter') {
+        event.preventDefault();
         redireccionar();
     }
 });

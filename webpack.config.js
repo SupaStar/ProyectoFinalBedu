@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
     entry: {
@@ -37,6 +38,7 @@ module.exports = {
             template: './src/results.html',
             chunks: ['resultados', 'header', 'footer']
         }),
+        new FaviconsWebpackPlugin('./src/assets/img/tasteU_logo-03-01.png')
     ],
     module: {
         rules: [
