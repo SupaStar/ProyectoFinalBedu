@@ -1,12 +1,12 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 
+
 .card__image-zoom {
 	transition: transform 0.2s;
 }
 .card__image-zoom:hover {
-	transform: scale(1.1);
+	transform: scale(1.15);
 }
-
 /* Class addon modified to centered */
 .field.has-addons {
     justify-content: center;
@@ -27,5 +27,9 @@
 @media screen and (max-width:  1024px) {
     .addon__text-hidden {
         display: none;
+    }
+
+    .card__image-zoom:hover {
+        transform: scale(1.05);
     }
 }
