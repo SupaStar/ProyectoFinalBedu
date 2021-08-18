@@ -14,6 +14,9 @@ import logo from '../img/logo.jpg';
 import logo_long from '../img/logo-01.png';
 // import bg from '../img/background4-about.jpg';
 
+import '../img/background2-about.jpg';
+import '../img/leaves2.jpg';
+
 export { mainImage, logo, logo_long };
 
 // import './header.js';

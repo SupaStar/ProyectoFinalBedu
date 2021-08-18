@@ -8,7 +8,7 @@
 
 .about,
 .about__overlay:before {
-  background: url(../img/background4-about.jpg) no-repeat fixed 0 0 / cover;
+  background: url('../img/background4-about.jpg') no-repeat fixed 0 0 / cover;
 }
 
 

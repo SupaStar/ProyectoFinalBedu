@@ -9,28 +9,28 @@
 <body>
   <header-component></header-component>
     
-  <section class="section is-medium cta-container">
-    <h1 class="title">We have solutions for your midnight cravings.</h1>
+  <section class="hero-container">
+    <div class='section is-medium cta-container'>
+      <h1 class="title has-text-white">We have solutions for your midnight cravings.</h1>
 
-    <form>
-
-      <div class="field has-addons">
-        <div class="control">
-          <input class="input is-medium" id="platillo" type="text" placeholder="Search your recipe" aria-label="Search your recipe">
+      <form>
+        <div class="field has-addons">
+          <div class="control">
+            <input class="input is-medium has-text-light" id="platillo" type="text" placeholder="Search your recipe" aria-label="Search your recipe">
+          </div>
+          <div class="control">
+            <button type="button" class="button is-light is-outlined is-medium" id="buscar">
+              Search
+            </button>
+          </div>
         </div>
-        <div class="control">
-          <button type="button" class="button is-dark is-medium" id="buscar">
-            Search
-          </button>
-        </div>
-      </div>
+      </form>
+    </div>
 
-
-    </form>
   </section>
 
-  <section class="section is-size-3 has-background-white-ter has-text-centered">
-    <p class='block has-text-centered is-size-4'>
+  <section class="section is-size-3 has-background-white has-text-centered random-container">
+    <p class='block has-text-centered is-size-4 random-text'>
     Bored to not know what to cook?
     Taste U will help you find nice and tasty recipes. Don't waste your time! Click the bottom below and find out what future holds for U.
     </p>
@@ -39,12 +39,18 @@
     </a>
   </section>
 
-  <h3 class='block title is-3 has-text-centered mt-6'>Some of the latest delights!</h3>
+  <div class='carousel-container '>
+    <div class='carousel-foreground'>
+      <h3 class='section title has-text-white has-text-centered'>Some of the latest delights!</h3>
 
-  <section class="section is-small carousel">
-    <a class="prevSlide" >&#10094;</a>
-    <a class="nextSlide" >&#10095;</a>
-  </section>
+      <section class="">
+        <div class="carousel">
+          <a class="prevSlide" >&#10094;</a>
+          <a class="nextSlide" >&#10095;</a>
+        </div>
+      </section>
+    </div>
+  </div>
 
   <footer-component></footer-component>
 
