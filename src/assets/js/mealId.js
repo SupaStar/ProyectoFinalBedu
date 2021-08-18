@@ -28,7 +28,7 @@ const mostrarReceta = (meal) => {
         let key = "strIngredient" + i;//Se concatena la key con el indice para ingredientes
         let keyMeasure = "strMeasure" + i;//Se concatena la key con el indice para cantidades
         let $divIngredientes = document.getElementById('ingredients');//Se obtiene el div donde se pondran los ingredientes
-        if (comida[key] !== "") {//Si el contenido es vacio, significa que no hay mas ingredientes
+        if (comida[key] !== ""&&comida[key] !==null) {//Si el contenido es vacio, significa que no hay mas ingredientes
             let $ingrediente = document.createElement('li');//Se crea el elemento de la lista de ingredientes
             $ingrediente.innerHTML = `${comida[key]} <b>${comida[keyMeasure]}</b>`;//Se agrega el ingrediente y su cantidad
             $divIngredientes.appendChild($ingrediente);//Se inserta el elemento en la lista
