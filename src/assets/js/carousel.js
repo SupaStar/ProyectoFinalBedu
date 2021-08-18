@@ -48,4 +48,4 @@ function showSlides(n) {
 var slideIndex = 0;
 renderCarousel(images);
 showSlides(slideIndex);
-
+export {renderCarousel};
