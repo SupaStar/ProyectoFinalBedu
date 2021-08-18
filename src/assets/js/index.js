@@ -9,14 +9,16 @@ import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
 
-import logo from '../img/logo.jpg'; // logo con espacio blanco
-import logo_long from '../img/logo-01.png'; // logo en header
+// import logo from '../img/logo.jpg'; // logo con espacio blanco
+// import logo_long from '../img/logo-01.png'; // logo en header
 
 import '../img/background4-about.jpg';
 import '../img/background2-about.jpg';
 import '../img/leaves2.jpg';
+import '../img/tasteU_logo_new_mini.png';
+import '../img/tasteU_logo-03-01.png';
 
-export { logo, logo_long };
+// export { logo, logo_long };
 
 // import './header.js';
 // import './footer.js';

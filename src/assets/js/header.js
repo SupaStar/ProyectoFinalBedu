@@ -1,5 +1,3 @@
-import { logo_long } from ".";
-
 class Header extends HTMLElement {
     constructor() {
       super();
@@ -9,8 +7,8 @@ class Header extends HTMLElement {
         this.innerHTML = `
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item" href="index.html">
-                    <img class="long-logo" src='${logo_long}' >
+                <a class="navbar-item long-logo" href="index.html">
+                    
                 </a>
             
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu__collapsed" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
@@ -35,8 +33,8 @@ class Header extends HTMLElement {
                     </a>
                 </div>
 
-                <a class="navbar-item centered-logo" href="index.html">
-                    <img class='long-logo' src=${logo_long} >
+                <a class="navbar-item centered-logo long-logo" href="index.html">
+                
                 </a>
             
                 <div class="navbar-end">

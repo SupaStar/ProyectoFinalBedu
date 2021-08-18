@@ -1,3 +1,9 @@
+.long-logo {
+    background: url('../img/tasteU_logo_new_mini.png') no-repeat center center;
+    background-size: cover;
+    width: 152px
+}
+
 .navbar-item {
     text-align: center;
 }

@@ -7,27 +7,10 @@ class Footer extends HTMLElement {
 
     connectedCallback() {
       this.innerHTML = `
-        <!-- <footer class="footer desktop-footer">
-          <img src=${logo} class='footer-logo'/>
-
-          
-          <ul class='footer-links'>
-            <li><a href='index.html'>Home</a></li>
-            <li><a href='about_us.html'>About us</a></li>
-            <li><a>Recipe list</a></li>
-            <li><a href='https://github.com/SupaStar/ProyectoFinalBedu' target='_blank'>GitHub repo</a></li>
-          </ul>
-        </footer>
-
-        <footer class="footer mobile-footer">
-          <p class='subtitle'>
-            We strive to always bring you the yummiest recipes!
-          </p>
-        </footer> -->
 
         <footer class='footer'>
           <div>
-            <img src=${logo} class='footer-logo'/>
+            <img src='./img/tasteU_logo-03-01.png' class='footer-logo'/>
 
             <ul class='footer-links'>
               <li><a href='index.html'>Home</a></li>
