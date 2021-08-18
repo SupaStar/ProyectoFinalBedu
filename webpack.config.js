@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         main: './src/assets/js/index.js',
-        buscar: './src/assets/js/buscar.js',
         mealId: './src/assets/js/mealId.js',
         footer: './src/assets/js/footer.js',
         header: './src/assets/js/header.js',
@@ -22,11 +21,6 @@ module.exports = {
             filename: 'index.html',
             template: './src/index.html',
             chunks: ['main', 'footer', 'header', 'carousel','buttonSearch']
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'busqueda.html',
-            template: './src/busqueda.html',
-            chunks: ['buscar']
         }),
         new HtmlWebpackPlugin({
             filename: 'about_us.html',
