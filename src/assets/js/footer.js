@@ -1,4 +1,4 @@
-import { logo } from ".";
+import ".";
 
 class Footer extends HTMLElement {
     constructor() {
