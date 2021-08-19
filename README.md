@@ -35,3 +35,5 @@ npm start
 El proyecto a realizar es una aplicación web que consiste en un buscador de recetas, consumiendo la API de [TheMealDB](https://www.themealdb.com/api.php). Es posible generar búsquedas a través de la interfaz y desplegar los resultados de manera dinámica. Al acceder a una receta, se despliegan más detalles acerca de la misma, como ingredientes e instrucciones. De manera adicional, se posibilita la búsqueda de recetas de manera aleatoria.
 
 Link del vídeo expositorio (vencimiento: 25 de agosto): [Descarga](https://we.tl/t-I6Uy83U9gF)
+
+Link del deploy en Netlify: [Link](https://zealous-bose-01a7aa.netlify.app/recipe.html?id=52956)
