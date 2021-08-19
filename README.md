@@ -36,4 +36,4 @@ El proyecto a realizar es una aplicación web que consiste en un buscador de rec
 
 Link del vídeo expositorio (vencimiento: 25 de agosto): [Descarga](https://we.tl/t-I6Uy83U9gF)
 
-Link del deploy en Netlify: [Link](https://zealous-bose-01a7aa.netlify.app/recipe.html?id=52956)
+Link del deploy en Netlify: [Link](https://tasteu.netlify.app/)
